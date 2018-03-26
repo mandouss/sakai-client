@@ -35,7 +35,7 @@ Users should download the Box_API project folder and import the folder into Ecli
 # Expected Output
 
 The expected output within Eclipse should be a list of all of the current files within the Box account, followed by the name of the folder that will be shared using a shareable link, followed by a new list of all of the current files within the Box account except this list now has a new folder created named "Sigma". If the permissions are examined in the webpage displaying all of the files of this Box account, the user should see that the new folder "Sigma" has made a professor, in this case the email "nrd10@duke.edu", an Editor and made a student, here the email "zw73@duke.edu", a Viewer. If the folder that was shared using a shareable link is examined, "Omnicron", we should see that the email "zw73@duke.edu", who would be 
-a student in this scenario, is now a Viewer.
+a student in this scenario, is now a Viewer. After a successful run, the first parameter for the Professor_Create call on line 112 must be changed as a folder with the same name as before cannot be recreated within Box. Additionally a new folder within Box may be created as well as a new shareable link to replace the string in line 119. This is due to the fact that you cannot add the same collaborators to a folder more than once, as that will throw an error.
  
 # Objective III: Deployed Apache Server that is Configurable with Java Backend
 
