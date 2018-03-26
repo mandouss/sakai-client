@@ -39,3 +39,4 @@ a student in this scenario, is now a Viewer.
  
 # Objective III: Deployed Apache Server that is Configurable with Java Backend
 
+Our objective was to stand up a simple web server that acknowledged that someone was trying to connect to the server. A user should navigate to the address: **152.3.64.14** in their Internet browser. This website should then have a small welcome message followed by the IP address of their computer. This was a simple objective to stand up a server that we knew we could easily add Java code to. The above Java API calls and functions defined in Objective II can be used to create logic that we can easily integrate with our source code on this simple server. 
