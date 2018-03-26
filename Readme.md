@@ -4,11 +4,8 @@ username for Box Developer account: nisargdbh@gmail.com
 
 password: October31
 
-# Dependencies
-Download  box-java-sdk-2.16.0.jar and minimal-json-0.9.1.jar
-and add to your build path
 
-# Other Dependencies 
+# Other Dependencies : Download/add dependencies to your Java Project
 1. [minimal-json v0.9.1](https://github.com/ralfstx/minimal-json)
    Maven: `com.eclipsesource.minimal-json:minimal-json:0.9.1`
 2. [jose4j v0.4.4](https://bitbucket.org/b_c/jose4j/wiki/Home)
