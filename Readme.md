@@ -7,7 +7,7 @@ For this sprint, we outlined a few objectives we thought were feasible and appro
 
 # Objective I: Display Box Within Sakai
 
-We were able to successfully display Box's interface within the Duke Sakai site. As explained and shown in the Embed BOX into Sakai folder, we determined what URL we needed to configure with Sakai's Tool interface. After doing so, users are able to access their respective Duke Box accounts within Sakai, and fully interact with the files in their account.
+We were able to successfully display Box's interface within the Duke Sakai site. As explained and shown in the Embed BOX into Sakai folder, we determined what URL we needed to configure with Sakai's Tool interface. After doing so, users are able to access their respective Duke Box accounts within Sakai, and fully interact with the files in their account. For greater detail, look at the README in Embed BOX in Sakai folder.
 
 # Objective II: Write Code To Create and Share Box Folders Programmatically
 
