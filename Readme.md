@@ -28,11 +28,11 @@ The code in BOX_test.java consists of multiple functions that define how to succ
 Calls to each of these are made after a few configuration lines are ran to successfully connect to Box's API.The one issue with the above code segment is that we still had trouble correctly using OAuth 2.0 authentication, which Box's API relies upon. As a result, in order to connect to the above username's account, we used a Developer Token. Developer Token's are primarily used as a testing methodology as they are  only valid for 1 hour time slots.
 
 
-#How to Test
+# How to Test
 
 Users should download the Box_API project folder and import the folder into Eclipse to allow it to run. When testing the above functionality, users should sign in to the above Box Developer account, click on the "Test Sakai" app, navigate to Configuration, and press Generate Developer Token. After the token is generated, the token must be copied and pasted in line 105 as a parameter for myaccount.Boxconnect(). After doing so they should click on "My Apps" on the left hand panel and then "My Files" once again on the left hand panel. After a new window opens displaying all of the files owned by this account, the user should run the Box_test.java file within Eclipse. 
 
-#Expected Output
+# Expected Output
 
 The expected output within Eclipse should be a list of all of the current files within the Box account, followed by the name of the folder that will be shared using a shareable link, followed by a new list of all of the current files within the Box account except this list now has a new folder created named "Sigma". If the permissions are examined in the webpage displaying all of the files of this Box account, the user should see that the new folder "Sigma" has made a professor, in this case the email "nrd10@duke.edu", an Editor and made a student, here the email "zw73@duke.edu", a Viewer. If the folder that was shared using a shareable link is examined, "Omnicron", we should see that the email "zw73@duke.edu", who would be 
 a student in this scenario, is now a Viewer.
