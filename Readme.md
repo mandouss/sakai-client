@@ -11,7 +11,7 @@ We were able to successfully display Box's interface within the Duke Sakai site.
 
 # Objective II: Write Code To Create and Share Box Folders Programmatically
 
-The Box_Dev folder contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API we created functions to both create a new Box folder to share with a roster of students, and to share an existing Box folder with a roster of students. The Box_test.java file is currently connecting to a Box developer account created by one the Sakai Client/Server team members. In order to test the functionality of the program, users should sign in to the Box Developer Account using the following credentials:
+The Box_Dev folder contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API we created functions to both create a new Box folder to share with a roster of students, and to share an existing Box folder with a roster of students. The App.java file is currently connecting to a Box developer account created by one the Sakai Client/Server team members. In order to test the functionality of the program, users should sign in to the Box Developer Account using the following credentials:
 
     Username: nisargdbh@gmail.com
 
