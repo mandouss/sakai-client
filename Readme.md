@@ -19,7 +19,9 @@ The Box_Dev folder contains Java source code as well as the correct JAR files an
 
 The code in BOX_test.java consists of multiple functions that define how to successfully share an existing folder with a set of users, and how to create a new folder and share it with a set of users. Additionally the current program represents the type of business logic we foresee ourselves incorporating on our middleware. 
 
-The current program will ask a user whether they want to create or share a folder, at which point the user must enter **Create** or **Share**. If they want to create a folder, a user will them be prompted for the name of the folder as well as the email of the professor who is to become an Editor for that folder. It will then ask a user for a list of emails, separated by new lines, of the students they want on this folder. The main functions are: 
+The current program will ask a user whether they want to create or share a folder, at which point the user must enter **Create** or **Share**. If they want to create a folder, a user will them be prompted for the name of the folder as well as the email of the professor who is to become an Editor for that folder. It will then ask a user for a list of emails, separated by new lines, of the students they want on this folder. When they are done adding student emails to share the new folder with they should type "**exit**"" and press Enter. If they choose to share a folder a user will be asked for an existing shareable link for a folder, which a user must get from their Box account for a folder they want to share. They will then be prompted to enter emails of students they want to share the folder with, again separated by newline characters. Once they are finished entering student emails, they should type in **exit** and press Enter to continue execution.
+
+ The main functions are: 
 
 1. **Professor_Create**: this function creates a new folder owned by a Box Account, and sets a professor as a Editor through an email
 
@@ -32,11 +34,11 @@ The other functions in the code primarily ask for user input and store that info
 Calls to each of these are made after a few configuration lines are ran to successfully connect to Box's API.The one issue with the above code segment is that we still had trouble correctly sharing a folder with students. As a result, the Share_Existing_Folder function has the logic we functionally would like, but it does not currently share the folder with users. Instead, it will print out information about the folder using the shared link you provided to our program.
 
 
-
 # How to Test
 
-Users should download the Box_API project folder and import the folder into Eclipse to allow it to run. When testing the above functionality, users should sign in to the above Box Developer account, click on the "Test Sakai" app, navigate to Configuration, and press Generate Developer Token. After the token is generated, the token must be copied and pasted in line 105 as a parameter for myaccount.Boxconnect(). After doing so they should click on "My Apps" on the left hand panel and then "My Files" once again on the left hand panel. After a new window opens displaying all of the files owned by this account, the user should run the Box_test.java file within Eclipse. 
-
+Users should download the BoxDev project folder and import the folder into Eclipse to allow it to run.
+After running it, they should follow the prompts and instructions above.
+ 
 # Expected Output
 
 The expected output within Eclipse should be a list of all of the current files within the Box account, followed by a prompt asking users if they want to create or share a folder. If they create a folder, users must ensure they do not choose a name for a folder that they saw in the initial list as two folders cannot have the same name in Box. After creating a folder, adding a professor email as Editor, and choosing which emails to invite as Viewers, users should be able to navigate to the Box account with the above credentials to see that a new folder is formed. Specifically, after logging into the above account, users should click Admin Console on the right hand side of the screen. They should then navigate to and click the Content Manager tab on the top and then press Test Sakai on the right hand panel. They should then see the new folder that they programatically created and be able to look at the folder's properties to see who they were able to successfully add as collaborators. 
