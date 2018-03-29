@@ -17,7 +17,7 @@ The Box_Dev folder contains Java source code as well as the correct JAR files an
 
     Password: October31
 
-The code in BOX_test.java consists of multiple functions that define how to successfully share an existing folder with a set of users, and how to create a new folder and share it with a set of users. Additionally the current program represents the type of business logic we foresee ourselves incorporating on our middleware. 
+The code in App.java consists of multiple functions that define how to successfully share an existing folder with a set of users, and how to create a new folder and share it with a set of users. Additionally the current program represents the type of business logic we foresee ourselves incorporating on our middleware. 
 
 The current program will ask a user whether they want to create or share a folder, at which point the user must enter **Create** or **Share**. If they want to create a folder, a user will them be prompted for the name of the folder as well as the email of the professor who is to become an Editor for that folder. It will then ask a user for a list of emails, separated by new lines, of the students they want on this folder. When they are done adding student emails to share the new folder with they should type "**exit**"" and press Enter. If they choose to share a folder a user will be asked for an existing shareable link for a folder, which a user must get from their Box account for a folder they want to share. They will then be prompted to enter emails of students they want to share the folder with, again separated by newline characters. Once they are finished entering student emails, they should type in **exit** and press Enter to continue execution.
 
