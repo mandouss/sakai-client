@@ -244,15 +244,16 @@
       <option name="presentableId" value="Default" />
       <updated>1522117710597</updated>
       <workItem from="1522117716189" duration="776000" />
-      <workItem from="1522509353270" duration="6005000" />
+      <workItem from="1522509353270" duration="6393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6781000" />
+    <option name="totallyTimeSpent" value="7169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-9" width="1860" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -324,8 +325,8 @@
         <state relative-caret-position="93">
           <caret line="38" column="86" lean-forward="true" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
           <folding>
-            <marker date="1522524790769" expanded="true" signature="736:811" ph="SELECT FOLDE... COURSE_FOLDER" />
-            <marker date="1522524790769" expanded="true" signature="1231:1299" ph="INSERT INTO COURSE_FOLDER... " />
+            <marker date="1522526113765" expanded="true" signature="771:846" ph="SELECT FOLDE... COURSE_FOLDER" />
+            <marker date="1522526113765" expanded="true" signature="1266:1334" ph="INSERT INTO COURSE_FOLDER... " />
           </folding>
         </state>
       </provider>

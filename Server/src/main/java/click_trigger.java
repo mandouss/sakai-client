@@ -1,6 +1,6 @@
-//import com.sun.corba.se.spi.activation.Server.LTI_message;	//change it before files are moved to new package
-//import com.sun.corba.se.spi.activation.Server.Box_helper;
-/*import com.sun.deploy.net.HttpRequest;
+import com.sun.corba.se.spi.activation.Server.LTI_message;	//change it before files are moved to new package
+import com.sun.corba.se.spi.activation.Server.Box_helper;
+import com.sun.deploy.net.HttpRequest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,15 +19,9 @@ public class click_trigger{
 		String result = httpRequest.body();
     }
 
-	public static void Read_Message(LTI_message msg){
-		//read message into the LTI_message class
-	}
 
 	public static void main(String []args){
-		LTI_message msg=new LTI_message();
-
-		//read message
-		Read_Message(msg);
+		LTI_message msg=new LTI_message(args);
 
 		//interact with box(like creating folder)
 		Box_Helper Box=new Box_Helper(msg);	//can use Nisarg's Box_test
@@ -36,4 +30,4 @@ public class click_trigger{
 		//Send the folder url back to sakai
         Redirect(Folder_url,msg);
 	}
-}*/
+}

@@ -12,12 +12,13 @@ public class Professor_Click {
 
     }
 
-    public static void main(String []args){
-        LTI_message msg= new LTI_message("123456",
+    public static void Click(LTI_message msg, Box_Helpter box){
+        /*LTI_message msg= new LTI_message("123456",
                 "sakai.duke.edu","Instructor",
                 "yd94@duke.edu","ECE_651");
+        */
 
-        Box_Helper=box();
+        //Box_Helper=box();
         Connection conn=null;
         Statement stmt=null;
 

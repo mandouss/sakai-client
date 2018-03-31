@@ -14,4 +14,13 @@ public class LTI_message{
 		this.person_email=person_email;
 		this.Course_Name=course_name;
 	}
+
+	public LTI_message(String []args){
+		//read message into the LTI_message class
+		this.course_id=args[0];
+		this.return_url=args[1];
+		this.roles=args[2];
+		this.person_email=args[3];
+		this.Course_Name=args[4];
+	}
 }
