@@ -19,15 +19,9 @@ public class click_trigger{
 		String result = httpRequest.body();
     }
 
-	public static void Read_Message(LTI_message msg){
-		//read message into the LTI_message class
-	}
 
 	public static void main(String []args){
-		LTI_message msg=new LTI_message();
-
-		//read message
-		Read_Message(msg);
+		LTI_message msg=new LTI_message(args);
 
 		//interact with box(like creating folder)
 		Box_Helper Box=new Box_Helper(msg);	//can use Nisarg's Box_test
