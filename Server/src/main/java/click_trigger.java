@@ -1,6 +1,6 @@
-//import com.sun.corba.se.spi.activation.Server.LTI_message;	//change it before files are moved to new package
-//import com.sun.corba.se.spi.activation.Server.Box_helper;
-/*import com.sun.deploy.net.HttpRequest;
+import com.sun.corba.se.spi.activation.Server.LTI_message;	//change it before files are moved to new package
+import com.sun.corba.se.spi.activation.Server.Box_helper;
+import com.sun.deploy.net.HttpRequest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,4 +36,4 @@ public class click_trigger{
 		//Send the folder url back to sakai
         Redirect(Folder_url,msg);
 	}
-}*/
+}
