@@ -30,7 +30,7 @@ public class click_trigger{
 		Read_Message(msg);
 
 		//interact with box(like creating folder)
-		Box_helper Box=new Box_helper(msg);	//can use Nisarg's Box_test
+		Box_Helper Box=new Box_Helper(msg);	//can use Nisarg's Box_test
         String Folder_url=Box.folderurl();
 
 		//Send the folder url back to sakai
