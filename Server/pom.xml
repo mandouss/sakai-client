@@ -7,6 +7,12 @@
     <groupId>Server</groupId>
     <artifactId>Server</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.box</groupId>
+            <artifactId>box-java-sdk</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
