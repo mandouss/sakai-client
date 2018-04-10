@@ -16,5 +16,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/nisargdabhi/Desktop/US_export_policy.jar"/>
+	<classpathentry kind="lib" path="/Users/nisargdabhi/Desktop/local_policy.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
