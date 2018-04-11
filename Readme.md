@@ -1,4 +1,4 @@
-# Sprint II README
+# Sprint III README
 
 In this sprint we were able to finalize a workflow that should allow us to be successful in integrating Box with Sakai. Our proposed methodology is to create some middleware that will listen for HTTP requests from Sakai. When a professor chooses to add Box as a tool in the list of External Tools, a request will be sent to our middleware. Our middleware will respond by either 1. programatically creating a new Box folder under a Duke service account that will set the professor as an Editor and all students as Viewers or 2. sharing an existing folder in the professor's Box Account, whose Shareable Link a professor will provide in an interface developed on Sakai, with a roster of students and setting them as Viewers. After a folder is shared or created, users of the Sakai course website should be able to view Box and its interface within Sakai and see the newly shared or created folder within their account.
 
