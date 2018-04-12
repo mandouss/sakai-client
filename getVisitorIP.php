@@ -57,9 +57,13 @@ echo '[launch_presentation_css]' . $launch_css. "</br>";
 echo '[ext_ims_lti_tool_setting_url]' . $ext_setting_url. "</br>";
 echo '[ext_ims_lti_memberships_url]' . $ext_mem_url. "</br>";
 
-# execute JAVA file
-echo exec("java HelloWorld") . "</br>";
+$context_title = str_replace(' ','_',$context_title);
+echo '[context_title]' . $context_title. "</br>";
 
+# execute JAVA file
+echo exec("java -jar BoxInput.jar " .$role. " ".$context_title." ".$personal_email)."</br>";
+
+/*
 # send a post request to somewhere
 echo "Try sending a POST request to the return url". "</br>";
 $ch = curl_init($return_url);
@@ -94,7 +98,7 @@ curl_close($ch);
 echo $response . "</br>";
 
 # header("Location:" . $return_url); 
-
+*/
 ?>
 
 
