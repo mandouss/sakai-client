@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb8146aa-64cc-4844-9e5d-1e7a4a523527" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/Box_Folder_Info.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Server/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Box_test_OAuth.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Professor_Click.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/click_trigger.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/middleware.java" afterPath="$PROJECT_DIR$/Server/src/main/java/middleware.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="middleware.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/src/main/java/middleware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="364">
+              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -293,7 +288,7 @@
       <workItem from="1522336850913" duration="732000" />
       <workItem from="1522507427977" duration="890000" />
       <workItem from="1522520014863" duration="3300000" />
-      <workItem from="1523494290393" duration="1537000" />
+      <workItem from="1523494290393" duration="2227000" />
     </task>
     <task id="LOCAL-00001" summary="recreate the branch ServerMain">
       <created>1522337109333</created>
@@ -330,14 +325,22 @@
       <option name="project" value="LOCAL" />
       <updated>1522526976674</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merged different people's code into the main function in middleware.java. Delete the database part code because we don't need database on our server. Added box_folder_info class to store folder_info we want. Moved some outdated code to OutDated folder.">
+      <created>1523499204773</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523499204773</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6459000" />
+    <option name="totallyTimeSpent" value="7149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-9" width="1860" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -351,7 +354,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32565445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19055374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19055374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -379,7 +382,8 @@
     <MESSAGE value="Add the SQL actions after Professor first and second click in Professor_Click.java" />
     <MESSAGE value="change the main into click and change its input parameters" />
     <MESSAGE value="Add a constructor of LTI_message which can direct initial LTI_message with a String []args. &#10;&#10;Changed the read message part in click_trigger." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a constructor of LTI_message which can direct initial LTI_message with a String []args. &#10;&#10;Changed the read message part in click_trigger." />
+    <MESSAGE value="Merged different people's code into the main function in middleware.java. Delete the database part code because we don't need database on our server. Added box_folder_info class to store folder_info we want. Moved some outdated code to OutDated folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged different people's code into the main function in middleware.java. Delete the database part code because we don't need database on our server. Added box_folder_info class to store folder_info we want. Moved some outdated code to OutDated folder." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -490,8 +494,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/java/middleware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="364">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>

@@ -10,11 +10,11 @@ public class middleware {
     //Please realize the three functions in Box_helper class
     /*boolean Check_Course_id(String course_id) {  //Fangyuan Sun  return true;  }
 
-    String Get_Folder_id(String course_id){return "";}
+        String Get_Folder_id(String course_id){return "";}
 
-    String Create_New_Folder(String course_id, String course_name) {  //Sihao Yao        return "";    }
+        String Create_New_Folder(String course_id, String course_name) {  //Sihao Yao        return "";    }
 
-    String Get_Folder_Info(String folder_id) {  //Luoyi Li        return "";    }*/
+            String Get_Folder_Info(String folder_id) {  //Luoyi Li        return "";    }*/
 
     public static void main(String[] args) {
         middleware my_middleware = new middleware();
