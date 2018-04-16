@@ -58,7 +58,7 @@ For successful use of the database and tables, ensure you have a username named 
 is "passw0rd" as our Java file expects a user with such credentials.
 
 
-# Purpose
+# Database Purpose
 
 The database is used to store an access token and refresh token. The access token is used to connect to our
 Duke Box Service Account programmatically and create folders within the account. These access tokens expire
