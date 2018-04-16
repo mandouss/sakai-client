@@ -1,4 +1,4 @@
-# Sprint III README
+# Sakai Server/Client Repository README
 
  
 # Objective I: Display Box Within Sakai
