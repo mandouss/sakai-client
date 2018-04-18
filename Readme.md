@@ -1,11 +1,13 @@
 # Sakai Server/Client Repository README
 
  
-# Objective I: Display Box Within Sakai
+# Display Box Within Sakai
 
-We were able to successfully display Box's interface within the Duke Sakai site as a Web Content Tool. As explained and shown in the Embed BOX into Sakai folder, we determined what URL we needed to configure with Sakai's Tool interface. After doing so, users are able to access their respective Duke Box accounts within Sakai, and fully interact with the files in their account. For greater detail, look at the README in Embed BOX in Sakai folder. The issue here is that this uses a separate interface from the LTI External Tool interface within Sakai. We are able to display Box with Sakai as a Web Content Tool, but this uses a hardcoded link and will not allow us to dynamically change what folder a user may be viewing within their Box account.
+We were able to successfully display Box's interface within the Duke Sakai site as an LTI External Tool. 
+After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, 
+look at the Server Setup section of the README.
 
-# Objective II: Write Code To Create Folders Programmatically
+# Code To Create Folders Programmatically
 
 The Box_Connect_Input folder contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API we created functions to create a new Box Folder.
 
