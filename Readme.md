@@ -1,12 +1,36 @@
-# Sakai Server/Client Repository README
+# Sakai Box Integration README
 
 # Introduction
 
-This repository contains code to successfully use Box Cloud services within Duke's production Sakai server. This code contains Java backend code
-that interacts with Box using Box's Java API as well as PHP code to run on an Apache server. We set up an Apache server on a VM obtained
-from Duke and successfully integrated our backend Java code with our PHP code. This code base allows Instructors at Duke to add Box as an
-External Tool and allows any users of the Sakai course site to be able to access and interact with their Duke Box cloud service accounts 
-within Sakai. The following sections go more in detail about what we accomplished and how we achieved our goals.
+This repository contains code to successfully integrate Box Cloud services with Duke's production Sakai server. 
+This code contains Java backend code that interacts with Box using Box's Java API as well as PHP code to run on an Apache server. The Java 
+backend code and PHP code running on the Apache server listens for POST requests sent by Duke's LTI External Tool interface. This code serves
+a couple functions: 
+1. It redirects users to the root folder of their Duke Box accounts to allow Box Cloud services to be displayed within Sakai
+2. It programmatically creates Box folders within a Duke Service Box Account dynamically.
+3. Programmatically adds collaborators to created Box folders
+
+The first functionality follows the format of normal Sakai LTI External Tools. In Sakai, the LTI External Tool has a Launch URL
+that points to our Apache server. When this Apache server receives POST requests, it will redirect whoever is connecting, in this case the
+specific user on Sakai, to Box. We conferred to this format as specified by the LTI v1.1 specification in order to have Box successfully
+be displayed within Sakai.T he second functionality relies upon the Duke Service Box Account. Duke OIT gave us access to a specific Box Account, the Duke Service
+Box Account, for us to create folders within. Our backend Java code programmatically authenticates to and connects to that account every
+time our Apache server receives a POST request from Sakai. A folder if first created when an Instructor on his or her course site first 
+clicks on the Box External Tool. After that, any user of the Sakai course site who clicks on our Box External tool will be added as collaborator
+to that folder and will be able to see that folder when Box is displayed within Sakai. This is better explained in later sections.
+***Note:*** Our middleware server adds collaborators based on emails. If any users of Sakai attempt to reuse this codebase to configure their
+own middleware, they must ensure that their users of Sakai have usernames associated by emails. Additionally each of these emails must be
+associated with a Box Account in order to see that email's corresponding Box Account within Sakai.
+
+# Initial Setup
+
+In order to reproduce our functionality with our code, users must first obtain a Box Account. After doing so, they should create an Application
+within the Developer Console. Note, the main configuration that they need to have is to specify that their application uses OAuth 2.0 Authentication.
+After this step is finished, they must follow the OAuth 2.0 protocol to successfully obtain access and refresh tokens for this account. These access
+and refresh tokens should then be inserted as the only row within the "TOKEN" table of PostgresSQL database we used in our setup. The purpose
+of the database is explained more later in this README, but we need to store access and refresh tokens with the database as these tokens
+continually expire and must be refreshed. Our Java backend program constantly refreshes these tokens and replaces the values within the database
+with the most current tokens. 
  
 # Box Sakai Integration Server
 
