@@ -23,7 +23,13 @@ own middleware, they must ensure that their users of Sakai have usernames associ
 associated with a Box Account in order to see that email's corresponding Box Account within Sakai.
 
 #Code
-The main code
+The main code here lies within the Box_Connect_Input folder and the Mid_Server folder. The Box_Connect_Input folder contains Java code within a
+Maven project and the Mid_Server folder contains PHP code. We compiled the Maven project into an executable JAR file. This JAR file
+expects three input arguments. Specifically it expects the 1. Role of the user 2. User email 3. Course name. These parameters
+are sent by the Sakai LTI Extneral Tool POST request. Our PHP code parse the POST request, gets these three parameters and passes them as input
+parameters to our Executable JAR and runs the JAR file. For users trying to reuse our code base they should look at the Java code base closely
+to understand how the Java code expects input parameters. They should also look at our PHP code closely to determine how it parse Sakai
+LTI POST requests.
 
 # Initial Setup
 
@@ -31,9 +37,10 @@ In order to reproduce our functionality with our code, users must first obtain a
 within the Developer Console. Note, the main configuration that they need to have is to specify that their application uses OAuth 2.0 Authentication.
 After this step is finished, they must follow the OAuth 2.0 protocol to successfully obtain access and refresh tokens for this account. These access
 and refresh tokens should then be inserted as the only row within the "TOKEN" table of PostgresSQL database we used in our setup. The purpose
-of the database is explained more later in this README, but we need to store access and refresh tokens with the database as these tokens
+of the database is explained more later in this README, but we need to store access and refresh tokens within the database as these tokens
 continually expire and must be refreshed. Our Java backend program constantly refreshes these tokens and replaces the values within the database
-with the most current tokens. After these steps users should then setup their server as specified in the next section.
+with the most current tokens. After the above steps, users looking to use our code must setup a server as specified in the next section, and 
+finally add these tokens to the database within the server.
  
 # Box Sakai Integration Server
 
