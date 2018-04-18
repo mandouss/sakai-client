@@ -69,13 +69,13 @@ echo "Try sending a POST request to the return url". "</br>";
 $ch = curl_init($return_url);
 
 $content = array(
-   "lti_message_type"=>"ContentItemSelection",   
+   "lti_message_type"=>"ContentItemSelectionRequest",   
    "lti_version" =>"LTI-1p0",
-   "content_items"=>array('house'=>'home','fruit'=>'apple'),
-   #"accept_media_types"=> "image/*",
-   #"accept_presentation_document_targets"=>"iframe",
-   #"content_item_return_url"=>$return_url,
+   "accept_media_types"=> "image/*",
+   "accept_presentation_document_targets"=>"iframe",
+   "content_item_return_url"=>$return_url,
 );
+
 
 $content = http_build_query($content);
 $context_options = array(
@@ -96,10 +96,12 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 echo $response . "</br>";
-
-# header("Location:" . $return_url); 
 */
+
+header('Location: https://duke.app.box.com/embed_widget/files/0/f/0');
+exit;
 ?>
 
 
 </html>
+
