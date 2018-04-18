@@ -49,14 +49,16 @@ for connections whenever uses direct traffic to our VM's specific domain node. W
 can successfully direct and redirect network traffic the way we would like. Specifically, when users attempt to click
 our Box tool within Sakai, a POST request is sent to our VM by Sakai's External Tool interface. The PHP frontend will parse the parameters of that 
 POST request, then run a Java executable file to interact with Box cloud services, and finally redirect users back to
-their root folder within their Box account. To change anything on our server administrators should run the
-the ssh command on their command line to connect to ***vcm@vcm-3385.vm.duke.edu*** and enter the correct password.
+their root folder within their Box account. To change anything on the server administrators should run the
+the ssh command on their command line to connect to the VM.
 
 We realized that in order to get our tool to work with Duke's Production Sakai Server we needed our VM to work with HTTPS.
 As a result, we registered our VM with the domain name ***sakaiboxintegrator.tk*** and obtained a free certificate for the 
 domain from a Certificate Authority. To get a free certificate we used the instructions found at: ***https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache***.
 ***Note***: These certificates last 90 days, so in order to continually renew them a user should
-login to their VM and run the command: ***sudo certbot renew --dry-run*** to renew their certificate. 
+login to their VM and run the command: ***sudo certbot renew --dry-run*** to renew their certificate. Users attempting to
+reproduce our results on their own Sakai sites must get a domain name for their server for free and get a certificate themselves. This
+is better explained later in the README.
 
 Additionally, this Server utilized a PostgreSQL database to store access and refresh tokens from Box. In order to authenticate
 our Duke Box Service Account with Box we must obtain access and refresh tokens from Box. After we initially obtained our access
@@ -84,9 +86,9 @@ holds one relation named TOKEN with the columns: 1. ID 2. ACCESS_TOKEN 3. REFRES
 The PSQL Query statemnts below can be used within a Terminal Shell connected to PostgresQL
 to create the appropriate relations: 
  
-1. Create DATABASE db;
+1. ***Create DATABASE db;***
 
-2. CREATE TABLE TOKEN(ID SERIAL PRIMARY KEY, ACCESS_TOKEN VARCHAR(100) NOT NULL, REFRESH_TOKEN VARCHAR(100) NOT NULL);
+2. ***CREATE TABLE TOKEN(ID SERIAL PRIMARY KEY, ACCESS_TOKEN VARCHAR(100) NOT NULL, REFRESH_TOKEN VARCHAR(100) NOT NULL);***
 
  
  
