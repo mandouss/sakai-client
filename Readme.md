@@ -163,7 +163,7 @@ course site. This is outlined within the Workflow section.
 For users who want to setup their own server for their own Sakai site, they could test the functionality within their own Sakai sites. This
 can be done by creating a new External LTI Tool within their Sakai site and setting their launch URL to the domain name of their server.
 After doing so, and ensuring that each of their users have usernames associated with emails, and following all of the steps above, this 
-code should properly execute the functions specified above.
+code should provide the above functionalities.
 
 
 
