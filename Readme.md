@@ -71,5 +71,5 @@ one set expires so that our program can continue to connect to the Duke Box Serv
 # Server Setup
 
 We realized that in order to get our tool to work with Duke's Production Sakai Server we needed our VM to work with HTTPS.
-As a result, we registered our VM with the domain name sakaiboxintegrator.tk and obtained a free certificate for the 
+As a result, we registered our VM with the domain name ***sakaiboxintegrator.tk*** and obtained a free certificate for the 
 domain from a Certificate Authority.
