@@ -105,7 +105,13 @@ This section explains the Java backend and how we compiled files in order to hav
 contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API
 we created functions to create a new Box Folder.
 
-The code in App.java consists of multiple functions that define how to create a new folder and share it with a set of users. Additionally we were able to figure out how to use OAuth 2.0 authentication that avoids having OIT formally do a security review, which is what would have been necessary had we used JWT Server Authentication. Our file utilizes a PostgresSQL database to store access and refresh tokens. Access tokens, used to connect to a Box account programmatically, expire every 60 minutes. When the token expires, our program will catch the exception associated with an expired access token, send a POST request to Box's token refreshing endpoint, receive new tokens, and replace the old tokens within our database. We need to now just determine how to package our Maven project into one executable .Java or JAR file, to successfully run on our PHP server.
+The code in App.java consists of multiple functions that define how to create a new folder and share it with a set of users. 
+Additionally we were able to figure out how to use OAuth 2.0 authentication to connect to our Box Account. Users may want to use Server JWT
+Authentication, but our Java code does not support that authentication model. Our file utilizes a PostgresSQL database to store access and 
+refresh tokens. Access tokens, used to connect to a Box account programmatically, expire every 60 minutes. When the token expires, 
+our program will catch the exception associated with an expired access token, send a POST request to Box's token refreshing endpoint, 
+receive new tokens, and replace the old tokens within our database. If there is any confusion about the access and refresh tokens, readers
+can refer to Box's Documentation about how they use OAuth 2.0.
 
  The main functions are: 
 
@@ -127,13 +133,13 @@ Calls to each of these are made after a few configuration lines are ran to succe
 # Workflow
 The typical workflow would be for a professor to go their Sakai course site, go to the Manage Tools section of the course site, 
 scroll down to the External Tools, and check the box next to the Box tool to add Box as an External Tool within their site.
- After doing so, they should go to their home page and click on the Box tool. This will trigger a POST request to be sent
- from the Duke Sakai server to our Box Sakai Integrator middleware. This middleware will then connect to Duke's Box Service Account
- and create a new Course site within that Box account that  matches the naming convention of the course site. The Instructor will then
- be added as a collaborator on the file and be given "Editor" privileges. After the folder associated with the course site is created 
- from the Instructor's initial click on the Box tool, any user who has access to that course site must click the Box  tool themselves to 
- be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an 
- Instructor clicks on Box, they will be given Editor privileges.
+After doing so, they should go to their home page and click on the Box tool. This will trigger a POST request to be sent
+from the Duke Sakai server to our Box Sakai Integrator middleware. This middleware will then connect to Duke's Box Service Account
+and create a new Course site within that Box account that  matches the naming convention of the course site. The Instructor will then
+be added as a collaborator on the file and be given "Editor" privileges. After the folder associated with the course site is created 
+from the Instructor's initial click on the Box tool, any user who has access to that course site must click the Box  tool themselves to 
+be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an 
+Instructor clicks on Box, they will be given Editor privileges.
  
 # How to Test/Expected Output Within Our Setup
 We have our Box Tool integrated on both a test Sakai server as well as Duke's production Sakai server. To test on the test Sakai server,
