@@ -28,7 +28,26 @@ The other functions in the code primarily ask for user input and store that info
 Calls to each of these are made after a few configuration lines are ran to successfully connect to Box's API. We have elected to limit the functionality of our program and not allow instructors to share existing folders and only create new folders.
 
 # How to Test/Expected Output
-At the moment we are still testing with Duke's production Sakai server. We are in the middle of setting up a test Sakai server for use by all Sakai development teams. Anyone looking to test this functionality should go to the BOX INT 100 1630 Sakai Course Site. If they do not have access to this site, they should contact any members of the Sakai Server/Client team to gain access. There they should see two tools: Box Linker and Box. When a user clicks on Box Linker, a POST request will be sent to our stood up middleware. In response the middleware will add the user as a collaborator to the Box Course folder associated with this Sakai course site. This can be verified by going to the Box tool. Users should click on the Box tool and then check if they are able to see a new Course folder that is shared with their account. 
+We have our Box Tool integrated on both a test Sakai server as well as Duke's production Sakai server. To test on the test Sakai server,
+users must request a username and password from the Sakai Server/Client development team. After doing so they will added to the ECE651
+test Course site. There, they will see a Box tool tab. Users should click on that tool. After clicking on that tool two things should happen:
+1. Users should be able to view their Duke Box Account files within Box's User Interface
+
+2. Users should see that they now have gained access to a ECE651 Box course folder. If the user is a Student within the ECE651 Sakai
+course site they will have Viewer permissions. If the user is an Instructor, they will have Editor privileges.
+
+To test on Duke's production Sakai server users should go to the BOX INT 100 1630 Sakai Course Site. If they do not have access to this site, 
+they should contact any members of the Sakai  Server/Client team to gain access. There they should see the Box tool on the left hand
+pane. When a user clicks on Box,a POST request will be sent to our stood up middleware. In response the middleware will add the user 
+as a collaborator to the Box Course folder associated with this Sakai course site. In this case the course folder is called BOX INT 100 1630.
+After clicking the Box tool, users should see their Duke Box Account files within Box's User Interface and gain access as either a Viewer or
+Editor to the BOX INT 100 1630 Box folder depending on whether they are a Student or Instructor who is accessing the BOX INT 100 Course Site.
+***Note***: Theusual workflow would involve an Instructor deciding to add Box as an External Tool through the Manage Tools section of Sakai.
+After doing so, the professor will click on the Box tool. This first initial click will create the Box folder associated with the course site.
+Any subsequent clicks will add users as collaborators, but the first initial click by an ***Instructor*** creates a Box folder for a 
+course site.
+
+click on the Box tool and then check if they are able to see a new Course folder that is shared with their account. 
 
 # Workflow
 The typical workflow would be for a professor to go their new course site, go to the Manage Tools section of the course site, and add both Box Linker and Box as tools they want incorporated on their site. After doing so, they should click on the Box Linker tool. This will trigger a new Course site that matches the naming convention of the course site to be created that will give the Instructor "Editor" privileges. After a folder is created any user who has access to that course site must click the Box Linker tool themselves to be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an Instructor clicks on Box Linker, they will be given Editor privileges.
