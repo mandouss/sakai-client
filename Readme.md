@@ -55,15 +55,17 @@ to create the appropriate relations:
 
  
  
-# Display Box Within Sakai
+# Functions: Display Box Within Sakai
 
-We were able to successfully display Box's interface within the Duke Sakai site as an LTI External Tool. 
-After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, 
+Our code and running server can successfully display Box's interface within the Duke Sakai site as an LTI External Tool. 
+After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, please
 look at the Server Setup section of the README.
 
 # Code To Create Folders Programmatically
 
-The Box_Connect_Input folder contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API we created functions to create a new Box Folder.
+This section explains the Java backend and how we compiled files in order to have our server work successfully.The Box_Connect_Input folder 
+contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API
+we created functions to create a new Box Folder.
 
 The code in App.java consists of multiple functions that define how to create a new folder and share it with a set of users. Additionally we were able to figure out how to use OAuth 2.0 authentication that avoids having OIT formally do a security review, which is what would have been necessary had we used JWT Server Authentication. Our file utilizes a PostgresSQL database to store access and refresh tokens. Access tokens, used to connect to a Box account programmatically, expire every 60 minutes. When the token expires, our program will catch the exception associated with an expired access token, send a POST request to Box's token refreshing endpoint, receive new tokens, and replace the old tokens within our database. We need to now just determine how to package our Maven project into one executable .Java or JAR file, to successfully run on our PHP server.
 
@@ -83,8 +85,6 @@ The other functions in the code primarily ask for user input and store that info
 
 Calls to each of these are made after a few configuration lines are ran to successfully connect to Box's API. We have elected to limit the functionality of our program and not allow instructors to share existing folders and only create new folders.
 
-
-click on the Box tool and then check if they are able to see a new Course folder that is shared with their account. 
 
 # Workflow
 The typical workflow would be for a professor to go their Sakai course site, go to the Manage Tools section of the course site, 
