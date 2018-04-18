@@ -55,7 +55,7 @@ to create the appropriate relations:
 
  
  
-# Functions: Display Box Within Sakai
+# Function: Display Box Within Sakai
 
 Our code and running server can successfully display Box's interface within the Duke Sakai site as an LTI External Tool. 
 After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, please
