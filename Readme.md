@@ -66,4 +66,10 @@ every 60 minutes. As a result, you must send a POST request to Box's Token endpo
 token, client ID and client Secret specified. Box will respond with a new set of access and refresh tokens.
 The new access token will be valid for another 60 minutes, and the refresh token can be used once again
 to get a new set of coins. The database will store each set of new access and refresh tokens whenever
-one set expires so that our program can continue to connect to the Duke Box Service Account.
+one set expires so that our program can continue to connect to the Duke Box Service Account. 
+
+# Server Setup
+
+We realized that in order to get our tool to work with Duke's Production Sakai Server we needed our VM to work with HTTPS.
+As a result, we registered our VM with the domain name sakaiboxintegrator.tk and obtained a free certificate for the 
+domain from a Certificate Authority.
