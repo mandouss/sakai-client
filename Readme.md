@@ -22,6 +22,9 @@ to that folder and will be able to see that folder when Box is displayed within 
 own middleware, they must ensure that their users of Sakai have usernames associated by emails. Additionally each of these emails must be
 associated with a Box Account in order to see that email's corresponding Box Account within Sakai.
 
+#Code
+The main code
+
 # Initial Setup
 
 In order to reproduce our functionality with our code, users must first obtain a Box Account. After doing so, they should create an Application
@@ -30,14 +33,14 @@ After this step is finished, they must follow the OAuth 2.0 protocol to successf
 and refresh tokens should then be inserted as the only row within the "TOKEN" table of PostgresSQL database we used in our setup. The purpose
 of the database is explained more later in this README, but we need to store access and refresh tokens with the database as these tokens
 continually expire and must be refreshed. Our Java backend program constantly refreshes these tokens and replaces the values within the database
-with the most current tokens. 
+with the most current tokens. After these steps users should then setup their server as specified in the next section.
  
 # Box Sakai Integration Server
 
-We obtained a virtual machine from Duke running Ubuntu 16.04. We used this VM to make an Apache Web Server that listens
-for connections whenever uses direct traffic to our VM's specific IP. We used PHP to create a simple web interface that
+We obtained a virtual machine running Ubuntu 16.04 to use for our server. We used this VM to make an Apache Web Server that listens
+for connections whenever uses direct traffic to our VM's specific domain node. We used PHP to create a simple web interface that
 can successfully direct and redirect network traffic the way we would like. Specifically, when users attempt to click
-our Box Sakai Integrator tool, a POST request is sent to our VM. The PHP frontend will parse the parameters of that 
+our Box tool within Sakai, a POST request is sent to our VM by Sakai's External Tool interface. The PHP frontend will parse the parameters of that 
 POST request, then run a Java executable file to interact with Box cloud services, and finally redirect users back to
 their root folder within their Box account. To change anything on our server administrators should run the
 the ssh command on their command line to connect to ***vcm@vcm-3385.vm.duke.edu*** and enter the correct password.
