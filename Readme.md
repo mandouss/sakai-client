@@ -76,10 +76,10 @@ can successfully direct and redirect network traffic the way we would like. Spec
 our Box Sakai Integrator tool, a POST request is sent to our VM. The PHP frontend will parse the parameters of that 
 POST request, then run a Java executable file to interact with Box cloud services, and finally redirect users back to
 their root folder within their Box account. To change anything on our server administrators should run the
-the ssh command on their command line to connect to ***vcm@vcm-3385.vm.duke.edu*** and use the password ***subrak0taN***.
+the ssh command on their command line to connect to ***vcm@vcm-3385.vm.duke.edu*** and enter the correct password.
 
 We realized that in order to get our tool to work with Duke's Production Sakai Server we needed our VM to work with HTTPS.
 As a result, we registered our VM with the domain name ***sakaiboxintegrator.tk*** and obtained a free certificate for the 
 domain from a Certificate Authority. These certificates last 90 days, so in order to continually renew them a user should
-login to our VM and run the command: *** sudo certbot renew --dry-run*** to renew their certificate.
+login to our VM and run the command: ***sudo certbot renew --dry-run*** to renew their certificate.
             
