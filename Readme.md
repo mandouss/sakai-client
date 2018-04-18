@@ -61,7 +61,7 @@ Our code and running server can successfully display Box's interface within the 
 After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, please
 look at the Server Setup section of the README.
 
-# Code To Create Folders Programmatically
+# Function: Create Box Folders and Invite Collaborators
 
 This section explains the Java backend and how we compiled files in order to have our server work successfully.The Box_Connect_Input folder 
 contains Java source code as well as the correct JAR files and other dependencies to correctly use Box's Java SDK. Through Box's Java API
