@@ -49,7 +49,15 @@ course site. This is outlined within the Workflow section.
 click on the Box tool and then check if they are able to see a new Course folder that is shared with their account. 
 
 # Workflow
-The typical workflow would be for a professor to go their new course site, go to the Manage Tools section of the course site, and add both Box Linker and Box as tools they want incorporated on their site. After doing so, they should click on the Box Linker tool. This will trigger a new Course site that matches the naming convention of the course site to be created that will give the Instructor "Editor" privileges. After a folder is created any user who has access to that course site must click the Box Linker tool themselves to be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an Instructor clicks on Box Linker, they will be given Editor privileges.
+The typical workflow would be for a professor to go their Sakai course site, go to the Manage Tools section of the course site, 
+scroll down to the External Tools, and check the box next to the Box tool to add Box as an External Tool within their site.
+ After doing so, they should go to their home page and click on the Box tool. This will trigger a POST request to be sent
+ from the Duke Sakai server to our Box Sakai Integrator middleware. This middleware will then connect to Duke's Box Service Account
+ and create a new Course site within that Box account that  matches the naming convention of the course site. The Instructor will then
+ be added as a collaborator on the file and be given "Editor" privileges. After the folder associated with the course site is created 
+ from the Instructor's initial click on the Box tool, any user who has access to that course site must click the Box  tool themselves to 
+ be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an 
+ Instructor clicks on Box, they will be given Editor privileges.
  
 
 # Objective III: Deployed Apache Server that is Configurable with Java Backend
