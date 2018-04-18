@@ -94,9 +94,10 @@ to create the appropriate relations:
  
 # Function: Display Box Within Sakai
 
-Our code and running server can successfully display Box's interface within the Duke Sakai site as an LTI External Tool. 
-After standing up a server we had to redirect users to a webpage associated with Box. For greater detail, please
-look at the Server Setup section of the README.
+Our code and running server can successfully display Box's interface within the Duke Sakai site as an LTI External Tool. It conforms to
+the LTI v1.1 specification so users who want to reproduce this result on their own Sakai sites should have their Sakai sites
+confirm to that specification.
+
 
 # Function: Create Box Folders and Invite Collaborators
 
