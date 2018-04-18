@@ -42,10 +42,9 @@ pane. When a user clicks on Box,a POST request will be sent to our stood up midd
 as a collaborator to the Box Course folder associated with this Sakai course site. In this case the course folder is called BOX INT 100 1630.
 After clicking the Box tool, users should see their Duke Box Account files within Box's User Interface and gain access as either a Viewer or
 Editor to the BOX INT 100 1630 Box folder depending on whether they are a Student or Instructor who is accessing the BOX INT 100 Course Site.
-***Note***: Theusual workflow would involve an Instructor deciding to add Box as an External Tool through the Manage Tools section of Sakai.
-After doing so, the professor will click on the Box tool. This first initial click will create the Box folder associated with the course site.
+***Note***: This first initial click on the Box tool by the Instructor of a course sitewill create the Box folder associated with the course site.
 Any subsequent clicks will add users as collaborators, but the first initial click by an ***Instructor*** creates a Box folder for a 
-course site.
+course site. This is outlined within the Workflow section.
 
 click on the Box tool and then check if they are able to see a new Course folder that is shared with their account. 
 
