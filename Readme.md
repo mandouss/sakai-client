@@ -22,7 +22,7 @@ to that folder and will be able to see that folder when Box is displayed within 
 own middleware, they must ensure that their users of Sakai have usernames associated by emails. Additionally each of these emails must be
 associated with a Box Account in order to see that email's corresponding Box Account within Sakai.
 
-#Code
+# Code
 The main code here lies within the Box_Connect_Input folder and the Mid_Server folder. The Box_Connect_Input folder contains Java code within a
 Maven project and the Mid_Server folder contains PHP code. We compiled the Maven project into an executable JAR file. This JAR file
 expects three input arguments. Specifically it expects the 1. Role of the user 2. User email 3. Course name. These parameters
