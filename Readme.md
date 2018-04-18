@@ -8,7 +8,7 @@ from Duke and successfully integrated our backend Java code with our PHP code. T
 External Tool and allows any users of the Sakai course site to be able to access and interact with their Duke Box cloud service accounts 
 within Sakai. The following sections go more in detail about what we accomplished and how we achieved our goals.
  
- # Server Setup
+# Box Sakai Integration Server
 
 We obtained a virtual machine from Duke running Ubuntu 16.04. We used this VM to make an Apache Web Server that listens
 for connections whenever uses direct traffic to our VM's specific IP. We used PHP to create a simple web interface that
@@ -43,11 +43,16 @@ one set expires so that our program can continue to connect to the Duke Box Serv
  
 # Database Configuration
 
-This database explains how our database was set up to allow developers to successfully test our files locally and across platforms.
+This section explains how our database was set up to allow developers to successfully test our files locally and across platforms.
  We created a PostgresSQL database named "db" with a username: "postgres" and password: "passw0rd". This database
 holds one relation named TOKEN with the columns: 1. ID 2. ACCESS_TOKEN 3. REFRESH_TOKEN.
 The PSQL Query statemnts below can be used within a Terminal Shell connected to PostgresQL
 to create the appropriate relations: 
+ 
+1. Create DATABASE db;
+
+2. CREATE TABLE TOKEN(ID SERIAL PRIMARY KEY, ACCESS_TOKEN VARCHAR(100) NOT NULL, REFRESH_TOKEN VARCHAR(100) NOT NULL);
+
  
  
 # Display Box Within Sakai
@@ -118,14 +123,6 @@ We have stood up some middleware that can successfully parse an LTI POST request
 NOTE: At the moment our metholodology involves the use of 1. a Web Content Tool 2. an LTI Tool. We were unable to learn how Sakai expects data to be sent back from a 3rd party tool so we do not know how to get an iFrame to successfully display within Sakai.
 
 
-
-1. Create DATABASE db;
-
-2. CREATE TABLE TOKEN(ID SERIAL PRIMARY KEY, ACCESS_TOKEN VARCHAR(100) NOT NULL, REFRESH_TOKEN VARCHAR(100) NOT NULL);
-
-
-For successful use of the database and tables, ensure you have a username named "postgres" whose password
-is "passw0rd" as our Java file expects a user with such credentials.
 
 
 
