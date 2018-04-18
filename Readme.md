@@ -116,13 +116,6 @@ Editor to the BOX INT 100 1630 Box folder depending on whether they are a Studen
 Any subsequent clicks will add users as collaborators, but the first initial click by an ***Instructor*** creates a Box folder for a 
 course site. This is outlined within the Workflow section.
 
-# Objective III: Deployed Apache Server that is Configurable with Java Backend
-
-We have stood up some middleware that can successfully parse an LTI POST request sent by Sakai. We now just have to be able to pass those POST parameters to our compiled JAR file with our Box functionality and we should be able to successfully configure a new Box tool in Sakai to be used.
-
-NOTE: At the moment our metholodology involves the use of 1. a Web Content Tool 2. an LTI Tool. We were unable to learn how Sakai expects data to be sent back from a 3rd party tool so we do not know how to get an iFrame to successfully display within Sakai.
-
-
 
 
 
