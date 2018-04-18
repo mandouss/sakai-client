@@ -54,8 +54,9 @@ the ssh command on their command line to connect to ***vcm@vcm-3385.vm.duke.edu*
 
 We realized that in order to get our tool to work with Duke's Production Sakai Server we needed our VM to work with HTTPS.
 As a result, we registered our VM with the domain name ***sakaiboxintegrator.tk*** and obtained a free certificate for the 
-domain from a Certificate Authority. These certificates last 90 days, so in order to continually renew them a user should
-login to our VM and run the command: ***sudo certbot renew --dry-run*** to renew their certificate. 
+domain from a Certificate Authority. To get a free certificate we used the instructions found at: ***https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache***.
+***Note***: These certificates last 90 days, so in order to continually renew them a user should
+login to their VM and run the command: ***sudo certbot renew --dry-run*** to renew their certificate. 
 
 Additionally, this Server utilized a PostgreSQL database to store access and refresh tokens from Box. In order to authenticate
 our Duke Box Service Account with Box we must obtain access and refresh tokens from Box. After we initially obtained our access
@@ -63,9 +64,9 @@ and refresh tokens, we can continually refresh our access tokens after they expi
 access and refresh tokens since we a request may not necessarily come within the 60 minute timespan. If a request does not come
 the access and refresh token stored in memory would be gone, and there would be no way to reconnect to our Duke Box Service Account.
 This is the main reason for our database, to continually store our access and refresh tokens. For more details on the access and 
-refresh tokens look at the Database sectoin.
+refresh tokens look at the Database section, which explains how to setup the database.
  
-# Database
+# Database: Purpose
 
 The database is used to store an access token and refresh token. The access token is used to connect to our
 Duke Box Service Account programmatically and create folders within the account. These access tokens expire
@@ -75,7 +76,7 @@ The new access token will be valid for another 60 minutes, and the refresh token
 to get a new set of coins. The database will store each set of new access and refresh tokens whenever
 one set expires so that our program can continue to connect to the Duke Box Service Account. 
  
-# Database Configuration
+# Database: Configuration
 
 This section explains how our database was set up to allow developers to successfully test our files locally and across platforms.
  We created a PostgresSQL database named "db" with a username: "postgres" and password: "passw0rd". This database
@@ -131,7 +132,7 @@ scroll down to the External Tools, and check the box next to the Box tool to add
  be added as Collaborators. If a Student clicks on the tool, they will be granted Viewer privileges to the Box folder, while if an 
  Instructor clicks on Box, they will be given Editor privileges.
  
- # How to Test/Expected Output
+# How to Test/Expected Output Within Our Setup
 We have our Box Tool integrated on both a test Sakai server as well as Duke's production Sakai server. To test on the test Sakai server,
 users must request a username and password from the Sakai Server/Client development team. After doing so they will added to the ECE651
 test Course site. There, they will see a Box tool tab. Users should click on that tool. After clicking on that tool two things should happen:
@@ -149,6 +150,11 @@ Editor to the BOX INT 100 1630 Box folder depending on whether they are a Studen
 ***Note***: This first initial click on the Box tool by the Instructor of a course sitewill create the Box folder associated with the course site.
 Any subsequent clicks will add users as collaborators, but the first initial click by an ***Instructor*** creates a Box folder for a 
 course site. This is outlined within the Workflow section.
+
+For users who want to setup their own server for their own Sakai site, they could test the functionality within their own Sakai sites. This
+can be done by creating a new External LTI Tool within their Sakai site and setting their launch URL to the domain name of their server.
+After doing so, and ensuring that each of their users have usernames associated with emails, and following all of the steps above, this 
+code should properly execute the functions specified above.
 
 
 
