@@ -2,7 +2,7 @@
 
 # Introduction
 
-This repository contains code to successfully use Box Cloud services within Duke's production Sakai server. This code contains backend code
+This repository contains code to successfully use Box Cloud services within Duke's production Sakai server. This code contains Java backend code
 that interacts with Box using Box's Java API as well as PHP code to run on an Apache server. We set up an Apache server on a VM obtained
 from Duke and successfully integrated our backend Java code with our PHP code. This code base allows Instructors at Duke to add Box as an
 External Tool and allows any users of the Sakai course site to be able to access and interact with their Duke Box cloud service accounts 
