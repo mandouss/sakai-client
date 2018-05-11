@@ -58,10 +58,22 @@ echo '[ext_ims_lti_tool_setting_url]' . $ext_setting_url. "</br>";
 echo '[ext_ims_lti_memberships_url]' . $ext_mem_url. "</br>";
 
 $context_title = str_replace(' ','_',$context_title);
-echo '[context_title]' . $context_title. "</br>";
+echo '[context_title]' . $context_title."</br>";
 
 # execute JAVA file
-echo exec("java -jar BoxInput.jar " .$role. " ".$context_title." ".$personal_email)."</br>";
+$java_return = exec("java -jar BoxInputv2.jar " .$role. " ".$context_title." ".$personal_email)."</br>";
+
+# remove the last 5 digits "</br>"
+$java_return = substr($java_return,0,-5); 
+
+if(empty($java_return)){
+ header('Location: https://duke.app.box.com/embed_widget/files/0/f/0');
+ exit;
+}
+else{
+ header("Location: ".$java_return);
+ exit; 
+}
 
 /*
 # send a post request to somewhere
@@ -97,11 +109,7 @@ curl_close($ch);
 
 echo $response . "</br>";
 */
-
-header('Location: https://duke.app.box.com/embed_widget/files/0/f/0');
-exit;
 ?>
 
 
 </html>
-
