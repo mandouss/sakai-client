@@ -31,6 +31,9 @@ parameters to our Executable JAR and runs the JAR file. For users trying to reus
 to understand how the Java code expects input parameters. They should also look at our PHP code closely to determine how it parse Sakai
 LTI POST requests.
 
+The Sakai_setup.sh code is a Bash script used to automatically set up the correct environment in order to build and run a test Sakai server.
+We used a test Sakai instance to help us test the functionality of the code outlined before.
+
 # Initial Setup
 
 In order to reproduce our functionality with our code, users must first obtain a Box Account. After doing so, they should create an Application
