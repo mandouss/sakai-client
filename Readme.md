@@ -23,8 +23,8 @@ own middleware, they must ensure that their users of Sakai have usernames associ
 associated with a Box Account in order to see that email's corresponding Box Account within Sakai.
 
 # Code
-The main code here lies within the Box_Connect_Input folder and the Mid_Server folder. The Box_Connect_Input folder contains Java code within a
-Maven project and the Mid_Server folder contains PHP code. We compiled the Maven project into an executable JAR file. This JAR file
+The main code here lies within the BoxInputv2 file and the Mid_Server folder. The BoxInputv2 file is a Java executable JAR file code
+and the Mid_Server folder contains PHP code. The JAR file
 expects three input arguments. Specifically it expects the 1. Role of the user 2. User email 3. Course name. These parameters
 are sent by the Sakai LTI Extneral Tool POST request. Our PHP code parse the POST request, gets these three parameters and passes them as input
 parameters to our Executable JAR and runs the JAR file. For users trying to reuse our code base they should look at the Java code base closely
